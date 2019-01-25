@@ -35,7 +35,7 @@
     "title": "key购买记录",
     "name": "BuyKeyList",
     "group": "LastWinner",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "parameter": {
       "fields": {
         "Parameter": [
