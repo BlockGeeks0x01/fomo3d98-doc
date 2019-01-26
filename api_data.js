@@ -105,6 +105,25 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/python/game/last_winner/rounds/{round_id:int}/key_price",
+    "title": "key价格",
+    "name": "KeyPrice",
+    "group": "LastWinner",
+    "version": "0.0.1",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "3.233",
+          "type": "text"
+        }
+      ]
+    },
+    "filename": "api/last_winner.py",
+    "groupTitle": "LastWinner"
+  },
+  {
+    "type": "get",
     "url": "/python/game/last_winner/rounds/{round_id:int}/countdown",
     "title": "游戏倒计时",
     "name": "RoundCountdown",
@@ -114,7 +133,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"ended\": true,       # 是否已结束\n    \"countdown\": {  // 倒计时\n        \"hour\": 34,\n        \"min\": 33,\n        \"sec\": 21\n    }\n}",
+          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"ended\": true,       # 是否已结束\n    \"countdown\": 3312312312\n}",
           "type": "json"
         }
       ]
@@ -144,7 +163,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/python/game/last_winner/rounds",
-    "title": "游戏记录",
+    "title": "游戏列表",
     "name": "RoundList",
     "group": "LastWinner",
     "version": "0.0.1",
