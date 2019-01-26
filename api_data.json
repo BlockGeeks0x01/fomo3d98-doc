@@ -105,6 +105,25 @@
   },
   {
     "type": "get",
+    "url": "/python/game/last_winner/rounds/{round_id:int}/countdown",
+    "title": "游戏倒计时",
+    "name": "RoundCountdown",
+    "group": "LastWinner",
+    "version": "0.0.1",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"ended\": true,       # 是否已结束\n    \"countdown\": {  // 倒计时\n        \"hour\": 34,\n        \"min\": 33,\n        \"sec\": 21\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "api/last_winner.py",
+    "groupTitle": "LastWinner"
+  },
+  {
+    "type": "get",
     "url": "/python/game/last_winner/rounds/{round_id:int}",
     "title": "游戏详情",
     "name": "RoundDetail",
@@ -114,7 +133,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"ended\": true,       # 是否已结束\n    \"key_price\": 0.33,\n    \"countdown\": {  // 倒计时\n        \"hour\": 34,\n        \"min\": 33,\n        \"sec\": 21\n    },\n    \"player\": {     // 当前玩家数据\n        \"keys\": 3333,   // key数量\n        \"pool\": 2.33    // 分红金额\n    }\n}",
+          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"ended\": true,       # 是否已结束\n    \"key_price\": 0.33,\n    \"player\": {     // 当前玩家数据\n        \"keys\": 3333,   // key数量\n        \"pool\": 2.33    // 分红金额\n    }\n}",
           "type": "json"
         }
       ]
