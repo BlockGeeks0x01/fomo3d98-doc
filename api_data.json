@@ -30,8 +30,31 @@
     "groupTitle": "Constant"
   },
   {
+    "type": "post",
+    "url": "/python/game/last_winner/rounds/{round_id:int}/keys",
+    "title": "购买key",
+    "name": "BuyKey",
+    "group": "LastWinner",
+    "version": "0.0.1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "keys",
+            "description": "<p>购买的key数量</p>"
+          }
+        ]
+      }
+    },
+    "filename": "api/last_winner.py",
+    "groupTitle": "LastWinner"
+  },
+  {
     "type": "get",
-    "url": "/game/last_winner/rounds/{round_id:int}/buy_key_records",
+    "url": "/python/game/last_winner/rounds/{round_id:int}/keys",
     "title": "key购买记录",
     "name": "BuyKeyList",
     "group": "LastWinner",
@@ -79,6 +102,116 @@
     },
     "filename": "api/last_winner.py",
     "groupTitle": "LastWinner"
+  },
+  {
+    "type": "get",
+    "url": "/python/game/last_winner/rounds/{round_id:int}",
+    "title": "游戏详情",
+    "name": "RoundDetail",
+    "group": "LastWinner",
+    "version": "0.0.1",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"ended\": true,       # 是否已结束\n    \"key_price\": 0.33,\n    \"countdown\": {  // 倒计时\n        \"hour\": 34,\n        \"min\": 33,\n        \"sec\": 21\n    },\n    \"player\": {     // 当前玩家数据\n        \"keys\": 3333,   // key数量\n        \"pool\": 2.33    // 分红金额\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "api/last_winner.py",
+    "groupTitle": "LastWinner"
+  },
+  {
+    "type": "get",
+    "url": "/python/game/last_winner/rounds",
+    "title": "游戏记录",
+    "name": "RoundList",
+    "group": "LastWinner",
+    "version": "0.0.1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "allowedValues": [
+              "1",
+              "2",
+              "3"
+            ],
+            "optional": true,
+            "field": "status",
+            "defaultValue": "2",
+            "description": "<p>游戏状态过滤：1进行中，2已结束，3所有</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageNumber",
+            "description": "<p>第几页,从1开始</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageSize",
+            "description": "<p>每页数量</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"winner_name\": \"获胜玩家姓名\",\n    \"end\": \"2019-12-01 16:00:00\",\n    \"ended\": true       # 是否已结束\n}]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "api/last_winner.py",
+    "groupTitle": "LastWinner"
+  },
+  {
+    "type": "get",
+    "url": "/python/game/last_winner/rounds/{round_id:int}/pool_rank",
+    "title": "分红排行榜",
+    "name": "RoundPoolRank",
+    "group": "LastWinner",
+    "version": "0.0.1",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[{\n    \"rank_id\": 1,   // 名次\n    \"user_name\": \"用户昵称\",\n    \"pool\": 1.33   // 分红金额\n}]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "api/last_winner.py",
+    "groupTitle": "LastWinner",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageNumber",
+            "description": "<p>第几页,从1开始</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "pageSize",
+            "description": "<p>每页数量</p>"
+          }
+        ]
+      }
+    }
   },
   {
     "type": "get",
