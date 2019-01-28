@@ -133,7 +133,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"ended\": true,       # 是否已结束\n    \"countdown\": 3312312312\n}",
+          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"ended\": true,       # 是否已结束\n    \"end\": \"2019-01-12 15:00:00\"\n}",
           "type": "json"
         }
       ]
@@ -152,7 +152,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"ended\": true,       # 是否已结束\n    \"key_price\": 0.33,\n    \"player\": {     // 当前玩家数据\n        \"keys\": 3333,   // key数量\n        \"pool\": 2.33    // 分红金额\n    }\n}",
+          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"ended\": true,       # 是否已结束\n    \"player\": {     // 当前玩家数据\n        \"keys\": 3333,   // key数量\n        \"pool\": 2.33    // 分红金额\n    }\n}",
           "type": "json"
         }
       ]
