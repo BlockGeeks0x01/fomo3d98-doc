@@ -43,8 +43,8 @@
             "group": "Parameter",
             "type": "int",
             "optional": false,
-            "field": "eth/wei",
-            "description": "<p>支付的eth金额(包含预估矿工费)</p>"
+            "field": "eth",
+            "description": "<p>支付的eth金额/wei(包含预估矿工费)</p>"
           }
         ]
       }
