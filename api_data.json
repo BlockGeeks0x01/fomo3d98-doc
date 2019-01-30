@@ -107,7 +107,7 @@
     "type": "get",
     "url": "/python/game/last_winner/rounds/{round_id:int}/key_price",
     "title": "购买key的费用",
-    "name": "KeyPrice",
+    "name": "KeyCost",
     "group": "LastWinner",
     "version": "0.0.1",
     "parameter": {
@@ -129,6 +129,25 @@
         {
           "title": "Success-Response:",
           "content": "{\n    \"fee\": 3.33,\n    \"actual_fee\": 33333333333,\n}",
+          "type": "text"
+        }
+      ]
+    },
+    "filename": "api/last_winner.py",
+    "groupTitle": "LastWinner"
+  },
+  {
+    "type": "get",
+    "url": "/python/game/last_winner/rounds/{round_id:int}/key_unit_price",
+    "title": "key单价",
+    "name": "KeyPrice",
+    "group": "LastWinner",
+    "version": "0.0.1",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "3.33",
           "type": "text"
         }
       ]
