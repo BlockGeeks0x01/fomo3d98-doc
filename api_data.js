@@ -43,8 +43,8 @@ define({ "api": [
             "group": "Parameter",
             "type": "int",
             "optional": false,
-            "field": "keys",
-            "description": "<p>购买的key数量</p>"
+            "field": "eth/wei",
+            "description": "<p>支付的eth金额(包含预估矿工费)</p>"
           }
         ]
       }
@@ -128,7 +128,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "3.233",
+          "content": "{\n    \"fee\": 3.33,\n    \"actual_fee\": 33333333333,\n}",
           "type": "text"
         }
       ]
@@ -147,7 +147,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"ended\": true,       # 是否已结束\n    \"end\": \"2019-01-12 15:00:00\"\n}",
+          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"ended\": true,       # 是否已结束\n    \"countdown\": \"2019-01-12 15:00:00\"\n}",
           "type": "json"
         }
       ]
