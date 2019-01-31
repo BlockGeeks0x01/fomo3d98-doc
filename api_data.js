@@ -95,7 +95,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"user_name\": \"用户昵称\",\n    \"eth\": 1.33,\n    \"buy_time\": \"2019-01-12 13:33:23\"\n}]",
+          "content": "[{\n    \"user_name\": \"用户昵称\",\n    \"keys\": 133,\n    \"buy_time\": \"2019-01-12 13:33:23\"\n}]",
           "type": "json"
         }
       ]
@@ -237,7 +237,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"winner_name\": \"获胜玩家姓名\",\n    \"end\": \"2019-12-01 16:00:00\",\n    \"ended\": true       # 是否已结束\n}]",
+          "content": "[{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"winner_name\": \"获胜玩家姓名\",\n    \"end\": \"2019-12-01 16:00:00\",\n    \"ended\": true,       # 是否已结束\n    \"flag\": 1           # 标签,1:有人购买,2:无人购买\n}]",
           "type": "json"
         }
       ]
