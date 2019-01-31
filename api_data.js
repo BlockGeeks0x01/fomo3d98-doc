@@ -185,7 +185,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"ended\": true,       # 是否已结束\n    \"player\": {     // 当前玩家数据\n        \"keys\": 3333,   // key数量\n        \"pool\": 2.33    // 分红金额\n    },\n    \"end\": \"2015-12-22 15:00:00\",\n    \"winner_name\": \"获胜玩家姓名\"\n}",
+          "content": "{\n    \"round_id\": 1,  // 游戏轮次,第X期\n    \"activate_pot\": 999,    // 游戏奖池\n    \"ended\": true,       # 是否已结束\n    \"started\": true,     # 是否已开始\n    \"player\": {     // 当前玩家数据\n        \"keys\": 3333,   // key数量\n        \"pool\": 2.33    // 分红金额\n    },\n    \"end\": \"2015-12-22 15:00:00\",\n    \"winner_name\": \"获胜玩家姓名\"\n}",
           "type": "json"
         }
       ]
